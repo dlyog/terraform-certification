@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terraform Associate Exam Tutorial - Section 1</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .content {
+    margin: 20px;
+  }
+  .question {
+    margin-top: 40px;
+  }
+  .question p {
+    font-weight: bold;
+  }
+  .answers {
+    margin-top: 10px;
+  }
+  .answer {
+    margin-bottom: 5px;
+  }
+</style>
+<script>
+function checkAnswer() {
+  var selectedAnswer = document.querySelector('input[name="iactest"]:checked').value;
+  var correctAnswer = "c";
+  if (selectedAnswer === correctAnswer) {
+    alert("Correct!");
+  } else {
+    alert("Incorrect. Try again!");
+  }
+}
+</script>
+</head>
+<body>
+<div class="content">
+  <h1>Section 1: Understand Infrastructure as Code (IaC) Concepts</h1>
+  <section id="1a">
+    <h2>1a. Explain what IaC is</h2>
+    <p>
+      Infrastructure as Code (IaC) is a method to provision and manage IT infrastructure through the use of source code, rather than through manual processes or interactive configuration tools. This approach allows developers and operations teams to automatically manage, monitor, and provision resources through code.
+    </p>
+    <p><strong>Example:</strong> Using Terraform, you can write configuration files that describe the infrastructure components such as virtual machines, networks, and volumes. Terraform then uses these files to create and manage the actual infrastructure on cloud providers like AWS, Azure, or Google Cloud Platform.</p>
+  </section>
+  <section id="1b">
+    <h2>1b. Describe advantages of IaC patterns</h2>
+    <ul>
+      <li><strong>Speed and Simplicity:</strong> Automated setups are faster and less prone to human error than manual configurations.</li>
+      <li><strong>Consistency:</strong> IaC ensures that the infrastructure is provisioned consistently every time, avoiding the "it works on my machine" syndrome.</li>
+      <li><strong>Accountability:</strong> Since the infrastructure is defined through code, changes are tracked and can be audited for compliance over time.</li>
+      <li><strong>Reusability:</strong> IaC modules can be reused across different environments, saving time and reducing the risk of discrepancies.</li>
+    </ul>
+  </section>
+  <div class="question">
+    <p>Mock Question: Which of the following is NOT an advantage of Infrastructure as Code (IaC)?</p>
+    <div class="answers">
+      <label class="answer"><input type="radio" name="iactest" value="a"> A. Speeds up deployment</label><br>
+      <label class="answer"><input type="radio" name="iactest" value="b"> B. Increases consistency</label><br>
+      <label class="answer"><input type="radio" name="iactest" value="c"> C. Reduces documentation</label><br>
+      <label class="answer"><input type="radio" name="iactest" value="d"> D. Enhances accountability</label><br>
+    </div>
+    <button onclick="checkAnswer()">Submit Answer</button>
+  </div>
+</div>
+</body>
+</html>
